@@ -2,23 +2,26 @@
 import 'package:flutter/material.dart';
 
 class HeaderSection extends StatelessWidget {
-  const HeaderSection({super.key});
+  final int X;
+  final int O;
+
+  const HeaderSection({super.key, required this.X, required this.O});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Text(
-          "X vs O",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+          'Tic Tac Toe',
+          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
         ),
         Text(
-          "Player x = 0",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+          'Player X = $X',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
         Text(
-          "Player Y = 0",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+          'Player O = $O',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
       ],
     );
